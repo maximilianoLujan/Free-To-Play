@@ -2,13 +2,20 @@ import Loader from "./components/Loader.js";
 import Header from "./components/Header.js"
 import { ajax } from "./helpers/ajax.js"
 import api from "./helpers/wp_api.js" 
+import trago from "./components/trago.js";
 
 
 
 
-const d = document;
+const d = document,
+    $root =d.querySelector(".root");
 export function App(){
-    d.querySelector(".root").appendChild(Header());
-    d.querySelector(".root").appendChild(Loader());
-    ajax({url:`${api.FILTER_NO_ALCOHOL}`,cbSuccess:(post)=>{console.log(post)}})
+    $root.appendChild(Header());
+    $root.appendChild(Loader());
+    ajax({url:`${api.RANDOM_DRINK}`,cbSuccess:(post)=>{
+        $root.appendChild(trago(post));
+        d.querySelector(".loader").style.display = "none";
+        console.log(post)
+    }})
+
 }
