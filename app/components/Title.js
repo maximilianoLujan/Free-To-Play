@@ -6,5 +6,6 @@ export default function title(){
     `<a href="${wp_api.DOMAIN}" target="_blank">
         ${wp_api.NAME.toUpperCase()}
     </a>`
+    
     return $title;
 }

@@ -16,6 +16,9 @@ body{
 
 h1{
     text-align: center;
+    margin-bottom: .8rem;
+    margin-top: 0;
+    padding-top: .3rem;
 }
 
 .error{
@@ -29,10 +32,31 @@ h1{
     text-align: center;
     margin: auto;
 }
-
+header{
+    background-color: bisque;
+    padding: .3rem;
+}
 .loader {
     display: block;
     height: 4rem;
     width: 4rem;
     margin: 2rem auto;
+}
+.navegacion{
+    text-align: center;
+    margin: auto;
+    padding: 0.5rem;
+    position: sticky;
+    top: 0;
+}
+.navegacion a{
+    text-decoration: none;
+    color: rgb(13, 10, 197);
+}
+.navegacion a:hover{
+    color: rgb(5, 5, 56);
+}
+.form-search{
+    margin: .5rem auto;
+    text-align: center;
 }
