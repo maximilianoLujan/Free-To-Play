@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", e =>{
     App();
 })
 window.addEventListener("hashchange", e =>{
-    document.querySelector(".content").innerHTML= null;
+    document.querySelector("div").innerHTML= null;
     Router();
 })
 
