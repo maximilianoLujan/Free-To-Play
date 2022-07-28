@@ -1,21 +1,17 @@
 import Loader from "./components/Loader.js";
 import Header from "./components/Header.js"
-import { ajax } from "./helpers/ajax.js"
-import api from "./helpers/wp_api.js" 
 import trago from "./components/trago.js";
+import Router from "./components/Router.js";
 
 
 
 
 const d = document,
-    $root =d.querySelector(".root");
+    $root =d.querySelector(".root"),
+    $content = d.querySelector(".content")
 export function App(){
+    $content.innerHTML = null;
     $root.appendChild(Header());
-    $root.appendChild(Loader());
-    ajax({url:`${api.RANDOM_DRINK}`,cbSuccess:(post)=>{
-        $root.appendChild(trago(post));
-        d.querySelector(".loader").style.display = "none";
-        console.log(post)
-    }})
-
+    $content.appendChild(Loader());
+    Router();
 }

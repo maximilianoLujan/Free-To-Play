@@ -4,7 +4,6 @@ export default function trago(props){
         html = ``;
 
     let {strDrink,strDrinkThumb,strInstructions} = drink;
-    console.log(drink.strIngredient1 !== null)
 
     if (drink.strIngredient1 !== null){
         html += `<li>${drink.strIngredient1}</li>`;

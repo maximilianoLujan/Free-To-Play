@@ -8,6 +8,7 @@ export function ajax(props){
         document.querySelector(".root").innerHTML +=
         `<div class="error">
             <p>Error: ${err.status}: ${message}</p>
-        </div>`
+        </div>`;
+        console.log(err)
      })
 }
