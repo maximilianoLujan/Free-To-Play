@@ -12,6 +12,5 @@ const d = document,
 export function App(){
     $content.innerHTML = null;
     $root.appendChild(Header());
-    $content.appendChild(Loader());
     Router();
 }

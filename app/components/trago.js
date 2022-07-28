@@ -1,8 +1,7 @@
-export default function trago(props){
-    let drink = props.drinks[0],
-        encontre = false,
+export default function trago(props,indice){
+    let drink = props.drinks[indice],
         html = ``;
-
+        
     let {strDrink,strDrinkThumb,strInstructions} = drink;
 
     if (drink.strIngredient1 !== null){
