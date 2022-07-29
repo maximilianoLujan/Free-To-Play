@@ -107,6 +107,16 @@ input {
     min-width: 15rem;
 }
 
+.die{
+    height: 5rem;
+    width: 5rem;
+    margin: auto;
+    border-radius: 50%;
+}
+.die:hover{
+    cursor: pointer;
+}
+
 @media screen and (max-width:930px) {
     img{
         width: 100%;

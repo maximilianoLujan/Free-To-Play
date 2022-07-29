@@ -16,11 +16,20 @@ export default async function Router(){
         $input = d.querySelector("input");
 
         d.querySelector(".loader").style.display = "block";
+        d.addEventListener("click", e =>{
+            if (e.target.matches(".die")){
+                w.location.reload();
+            }
+        })
     if (!hash || hash === "#/"){
         await ajax({url:`${api.RANDOM_DRINK}`,cbSuccess: (post)=>{
             d.querySelector(".loader").style.display = "none";
             $input.value = null;
-            $content.innerHTML = `<h2>Este es tu trago random del dia</h2>`
+            $content.innerHTML = `
+                <h2>Este es tu trago random del dia</h2>
+                <img class="die" src="app/assets/red-die.svg" alt="die"></img>
+
+            `
             $content.classList.remove("fluid-grid");
             $content.classList.add("content");
             trago(post.drinks[0]).classList.add("trago")
