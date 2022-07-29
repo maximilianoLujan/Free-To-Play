@@ -4,7 +4,7 @@ export default function Nav(){
     $nav.innerHTML = 
     `
         <a href="#/">Home</a>
-        <a href="#/search">Busqueda</a>
+        <a id="busqueda" href="#/search">Busqueda</a>
         <a href="#/bebidasAlcoholicas">Bebidas Alcoholicas</a>
         <a href="#/bebidasSinAlcohol">Bebidas sin Alcohol</a>
 

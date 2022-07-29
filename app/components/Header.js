@@ -4,6 +4,7 @@ import title from "./Title.js";
 
 export default function Header(){
     const $header = document.createElement("header");
+
     $header.appendChild(title());
     $header.appendChild(Nav());
     $header.appendChild(Formulario());    

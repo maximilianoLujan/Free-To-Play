@@ -1,5 +1,5 @@
-export default function trago(props,indice){
-    let drink = props.drinks[indice],
+export default function trago(props){
+    let drink = props,
         html = ``;
         
     let {strDrink,strDrinkThumb,strInstructions} = drink;
@@ -50,6 +50,7 @@ export default function trago(props,indice){
         html += `<li>${drink.strIngredient15}</li>`;
     } 
     const $figura = document.createElement("figure");
+    $figura.classList.add("trago-griditem");
     $figura.classList.add("trago");
     $figura.innerHTML = 
     `
