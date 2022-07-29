@@ -7,10 +7,9 @@ import Router from "./components/Router.js";
 
 
 const d = document,
-    $root =d.querySelector(".root"),
-    $content = d.querySelector("div")
+    $content = d.querySelector("div");
 export function App(){
     $content.innerHTML = null;
-    $root.appendChild(Header());
+    d.querySelector(".contenedor-loader").appendChild(Loader());
     Router();
 }

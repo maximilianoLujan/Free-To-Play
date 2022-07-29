@@ -1,5 +1,8 @@
 export default function tragoSinIngredientes(props,indice){
     let drink = props.drinks[indice];
+    if(!drink){
+        return false;
+    }
     let {strDrink,strDrinkThumb} = drink;
 
     const $figura = document.createElement("figure");
